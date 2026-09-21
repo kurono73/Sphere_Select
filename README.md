@@ -34,7 +34,7 @@ It integrates alongside Blender's standard selection tools and supports **Object
 
 Sphere Select follows the **default Circle Select keymap and interaction behavior** in both the Toolbar and Select menu, providing familiar controls for a true 3D selection brush.
 
-Keyboard and mouse shortcuts can be customized through Blender's **Keymap preferences**.
+Sphere Select follows the default Circle Select interaction behavior in both the Toolbar and Select menu. Controls can be customized through Blender's Keymap preferences.
 
 ### Toolbar
 
