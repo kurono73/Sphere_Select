@@ -47,9 +47,11 @@ Choose **Set**, **Extend**, or **Subtract** as the selection mode.
 
 Drag across the surface to paint a 3D selection. The selection is committed when the mouse button is released.
 
-### Select Menu / Shortcut
+### Select Menu
 
 Like `Circle Select` launched from the Select menu, Sphere Select starts a continuous selection session.
+
+> Sphere Select has no default shortcut assigned for launching the tool, but you can assign any custom shortcut through Blender's Keymap preferences.
 
 - **Drag** — Extend selection
 - **Shift + Drag** — Subtract selection
@@ -73,3 +75,11 @@ Works with Blender's Vertex, Edge, and Face selection modes.
 ### Point Cloud Edit Mode
 
 Directly selects native Point Cloud points without converting the data to a mesh.
+
+## Notes
+
+- **Scene Scale:** Sphere Select uses a world-space radius, so its apparent size depends on the scene scale. If the brush appears too small or invisible, increase the brush radius before starting the selection.
+
+- **High-Poly Meshes:** When working with high-poly meshes, Sphere Select may take a moment to prepare selection data when first used. Once prepared, the data is cached for faster subsequent interaction.
+
+- **Highlight Preview:** When the brush covers very dense geometry, the selection highlight may appear slightly simplified or coarse to maintain viewport performance. This affects only the visual preview and does not reduce the accuracy of the actual selection.
