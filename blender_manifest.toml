@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "sphere_select"
+version = "1.0.0"
+name = "Sphere Select"
+tagline = "Select objects, mesh elements and points with a 3D sphere"
+maintainer = "Naoki Korematsu"
+type = "add-on"
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
+tags = ["3D View", "Mesh", "Modeling"]
