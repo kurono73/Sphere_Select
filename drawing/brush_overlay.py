@@ -231,3 +231,19 @@ def draw_status_cursor(x, y, radius, miss, pixel_radius=12.0):
         gpu.state.line_width_set(1.0)
         gpu.state.blend_set(blend)
         gpu.state.depth_test_set(depth)
+
+
+def draw_menu_radius_status(radius):
+    """Persistent radius readout for a temporary Select-menu session."""
+    import blf
+    blend, depth = gpu.state.blend_get(), gpu.state.depth_test_get()
+    try:
+        gpu.state.blend_set('ALPHA')
+        gpu.state.depth_test_set('NONE')
+        blf.position(0, 20, 20, 0)
+        blf.size(0, 12)
+        blf.color(0, 0.55, 0.85, 1.0, 0.9)
+        blf.draw(0, f'Sphere Select  |  Radius {radius:.4g}  |  Wheel: Resize')
+    finally:
+        gpu.state.blend_set(blend)
+        gpu.state.depth_test_set(depth)

@@ -143,11 +143,13 @@ def draw_pixel():
         return
     x,y = xy[0]-context.region.x,xy[1]-context.region.y
     if 0 <= x < context.region.width and 0 <= y < context.region.height:
-        from ..drawing.brush_overlay import draw_status_cursor
+        from ..drawing.brush_overlay import draw_menu_radius_status, draw_status_cursor
         radius = context.window_manager.sphere_select_settings.radius
         pixels = status_radius(state, radius)
         if pixels is not None:
             draw_status_cursor(x,y,radius,True,pixels)
+        elif getattr(state, 'continuous', False):
+            draw_menu_radius_status(radius)
 
 
 def status_radius(state, radius):
